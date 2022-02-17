@@ -12,14 +12,12 @@
   <h2 id="hello">안녕하세요</h2>
   <h2 id="hi">올때메로나</h2>
 
-  <div class="alert_box">Alert 박스<button class="close_btn" onclick="
-    const alertBox = document.querySelector('.alert_box');
-    alertBox.style.display = 'none';    
-    ">X</button></div>
-  <button class="alert_btn" onclick="
-    const alertBox = document.querySelector('.alert_box');
-    alertBox.style.display = 'block';
-  ">Button</button>
+  <div id="alertbox" class="alert_box" >
+    <p>Alert 박스</p>
+    <button onclick="boxClose()">X</button>
+  </div>
+  
+  <button onclick="block()">Button</button>
 
 
   <script>
@@ -27,6 +25,20 @@
     document.getElementById('hello').innerHTML = '안녕';
     document.getElementById('hi').innerHTML = '올때바밤바';
     document.getElementById('hello').style.fontSize = '30px';
+
+   
+    function block('block'){
+      document.querySelector('#alertbox').style.display = 'block';
+    }
+    
+    block()
+   
+    function boxClose(){
+      document.querySelector('#alertbox').style.display = 'none';
+    }
+
+
+
 
   </script>
   
