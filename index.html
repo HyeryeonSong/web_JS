@@ -5,40 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web_JS</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css">  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <h2 id="hello">안녕하세요</h2>
   <h2 id="hi">올때메로나</h2>
+  <h4 id="test">하잉</h4>
 
   <div id="alertbox" class="alert_box" >
-    <p>Alert 박스</p>
-    <button onclick="boxClose()">X</button>
-  </div>
+    <p id="boxcontent"></p>
+    <button id="close">X</button>
+  </div> 
   
-  <button onclick="block()">Button</button>
-
+  <button id="idBtn">Button1</button>
+  <button id="pwBtn">Button2</button>
 
   <script>
-
     document.getElementById('hello').innerHTML = '안녕';
     document.getElementById('hi').innerHTML = '올때바밤바';
     document.getElementById('hello').style.fontSize = '30px';
 
-   
-    function block('block'){
-      document.querySelector('#alertbox').style.display = 'block';
+    function alertBoxControl(option, content){
+      document.getElementById('boxcontent').innerHTML = content;
+      document.getElementById('alertbox').style.display = option;
     }
     
-    block()
-   
-    function boxClose(){
-      document.querySelector('#alertbox').style.display = 'none';
-    }
+    document.getElementById('close').addEventListener('click', function(){
+      alertBoxControl('none');
+    })
+    document.getElementById('idBtn').addEventListener('click', function(){
+      alertBoxControl('block', '아이디를 입력 안하셨어요.')
+    })
+    document.getElementById('pwBtn').addEventListener('click', function(){
+      alertBoxControl('block', '비밀번호를 입력 안하셨어요.')
+    })
 
-
-
+    $('#test').addClass('yellow_bg');
 
   </script>
   
