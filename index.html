@@ -24,20 +24,20 @@
     <li class="list-group-item">A fourth item</li>
     <li class="list-group-item">And a fifth one</li>
   </ul>
-  <p class="hello">안녕</p>
+  <p class="hello">Hello ! </p>
   <button class="login__btn">로그인</button>
   <div class="modal__bg">
     <div class="modal__popup">
       <h3>로그인</h3>
       <form action="success.html">
         <div class="my-3">
-          <input type="text" class="form-control">
+          <input id="email" type="text" class="form-control" >
         </div>
         <div class="my-3">
-          <input type="password" class="form-control">
+          <input id="password" type="password" class="form-control" >
         </div>
-        <button type="submit" class="btn btn-primary">전송</button>
-        <button type="button" class="btn btn-danger modal__close" id="close">닫기</button>
+        <button id="send" type="submit" class="btn btn-primary" onsubmit="return inputAlert()">전송</button>
+        <button id="close" type="button" class="btn btn-danger modal__close" id="close">닫기</button>
       </form>
     </div>
   </div>
