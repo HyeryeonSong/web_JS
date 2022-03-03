@@ -1,3 +1,8 @@
+.dark{
+  background-color: black;
+  color: #fff;
+}
+
 .list-group{
   display: none;
 }
@@ -29,5 +34,9 @@
   height: 250px;
   background-color: #fff;
   padding: 30px;
+}
+
+.badge{
+  cursor: pointer;
 }
 
