@@ -7,6 +7,9 @@ function App() {
       <div className="buttons">
         <Button 
           size="large"
+          // onClick={() => console.log('Click!!!')}
+          // onMouseOver={() => console.log('hover')}
+          // onMouseOut={() => console.log('OUT')}
         >BUTTON</Button>
         <Button
         >BUTTON</Button>

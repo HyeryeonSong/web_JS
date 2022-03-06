@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "polished": "^4.1.4",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.3",
+    "yarn": "^1.22.17"
   }
 }
