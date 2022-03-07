@@ -56,7 +56,7 @@ const fullWidthStyle = css`
     css`
       width: 100%;
       justify-content: center;
-      & + & {
+      &:not(:first-child) {
         margin-left: 0;
         margin-top: 1rem;
       }
@@ -83,11 +83,10 @@ const StyledButton = styled.button`
   ${colorStyles}
 
   /* 기타 */
-  &:not:first-child {
+  &:not(:first-child) {
     margin-left: 1rem;
-    margin-top: 1rem;
   }
-
+  /* fullwidth */
   ${fullWidthStyle}
 `;
 
