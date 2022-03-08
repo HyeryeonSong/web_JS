@@ -2,6 +2,32 @@
   background-color: black;
   color: #fff;
 }
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+
+.greeting{
+  width: 100vw;
+  height: 200px;
+  background-color:#e6e6e6;
+  padding: 20px;
+}
+
+.hello{
+  font-size: 24px;
+  font-weight: bold;
+}
+.login__btn{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #FF4949;
+  color: #fff;
+  border: none;
+}
 
 .list-group{
   display: none;
@@ -40,3 +66,19 @@
   cursor: pointer;
 }
 
+/* Carousel */
+.slide__wrap{
+  overflow: hidden;
+}
+.slide__container{
+  width: 300vw;  
+  transition: all 1s;
+  list-style: none;
+}
+.slide_box{
+  width: 100vw;
+  float: left;
+}
+.slide_box img{
+  width: 100%;
+}
