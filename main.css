@@ -1,11 +1,28 @@
 .dark{
-  background-color: black;
+  background-color: rgb(34, 34, 34);
   color: #fff;
 }
 .navbar{
   position: fixed;
   width: 100%;
   z-index: 5;
+  padding-bottom: 0;
+}
+.navbar-brand{
+  font-size: 25px;
+}
+.scroll-line{
+  width: 100%;
+  height: 3px;
+  position: relative;
+  background: #eee;
+  bottom: 0;
+}
+
+.scroll-fill{
+  width: 10%;  
+  height: 3px;
+  background-color: black;  
 }
 
 
@@ -14,6 +31,8 @@
   height: 200px;
   background-color:#e6e6e6;
   padding: 20px;
+  padding-top: 67px;
+
 }
 
 .hello{
@@ -31,9 +50,10 @@
 
 .list-group{
   display: none;
+  padding-top: 60px;
 }
 
-.list-group.show{
+.list-group.show[data-tab-content]{
   display: block;
 }
 
@@ -81,4 +101,48 @@
 }
 .slide_box img{
   width: 100%;
+}
+
+.manual{
+  width: 400px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+/* Detail */
+ul.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+ul.list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.list li{
+  display: block;
+  padding: 10px 20px 10px 20px;
+  float: left;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+.orange {
+  border-top: 2px solid orange;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid white;
+  border-left: 1px solid #ccc;
+  color: black;
+  margin-top: -2px;
+}
+.tab-content {
+  display: none;
+  padding: 10px;
+}
+.show {
+  display: block;
 }

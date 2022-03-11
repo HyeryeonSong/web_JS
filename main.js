@@ -1,11 +1,9 @@
 document.querySelector('.navbar-toggler').addEventListener('click', function(){
   document.querySelector('.list-group').classList.toggle('show');
 })
-
 document.querySelector('.login__btn').addEventListener('click', function(){
   document.querySelector('.modal__bg').classList.toggle('modal__show');
 })
-
 document.querySelector('.modal__close').addEventListener('click', function(){
   document.querySelector('.modal__bg').classList.remove('modal__show');
 })
@@ -44,6 +42,39 @@ darkmodeBadge.addEventListener('click', function(){
     document.body.classList.toggle('dark');
   }
 });
+
+
+// 스크롤시 Navbar 폰트사이즈 조절
+const scrollTop = window.scrollTop;
+console.log(scrollTop);
+ window.addEventListener('scroll', function(){
+  const scrollHeight = window.scrollY;  
+  const navText = document.querySelector('.navbar-brand')
+   if( scrollHeight > 100 ){
+    navText.style.fontSize = "20px";
+   } else if ( scrollHeight === 0){
+    navText.style.fontSize = "25px";
+   }  
+    // 스크롤시 페이지 진척도 
+  const viewHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+  const scrollPercent = (scrollHeight + viewHeight) / documentHeight*100;
+  const scrollFill = document.querySelector('.scroll-fill');
+  scrollFill.style.width = scrollPercent + "%";  
+ });
+
+
+ // Manual 스크롤 내리면 버튼 활성화
+const manual = document.querySelector('.manual');
+manual.addEventListener('scroll', function(){  
+  // div 실제 height == 스크롤바 내린 양 + 눈에보이는 height  
+  if(manual.scrollHeight - 10 <=  manual.scrollTop + manual.clientHeight){ 
+    const manualButton = document.querySelector('.manual__button');
+    manualButton.disabled = false;
+  }
+ });
+
+
 
 setTimeout(function(){ // 몇초 후 특정 코드 실행(콜백함수, 시간)
   const alertBox = document.querySelector('.alert');
@@ -129,3 +160,4 @@ slideButton3.addEventListener('click', function(){
 // }
 
 // console.log(합격했니(50,50));
+
